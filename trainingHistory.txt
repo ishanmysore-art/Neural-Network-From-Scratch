@@ -1,0 +1,483 @@
+Training:
+
+Time Started: 2026-01-08T17:12:45.767501
+=======================================================================================================
+--- Configuration Parameters ---
+Configuration File Name: configFile.txt
+Number of Connectivity Layers: 3
+Network Configuration: 65536-20-10-5
+Mode: TRAIN
+Populate Method: RANDOM
+Random range: [-1.0000, 1.0000]
+Show Input Table: false
+Show Truth Table: false
+Learning Rate: 0.300000
+Max Iterations: 100000
+Keep Alive Interval: 50
+Average error threshold: 0.00020000
+Truth Table File: truthTableImg.txt
+Input Table Folder: ActivationsTraining/
+Number of Cases: 25
+Save Weights: true
+Saving Weights To File: trainedWeights.bin
+Input table loaded successfully from folder: ActivationsTraining/
+Iteration 50, Error = 0.038656
+Iteration 100, Error = 0.012058
+Iteration 150, Error = 0.006191
+Iteration 200, Error = 0.004032
+Iteration 250, Error = 0.002950
+Iteration 300, Error = 0.002313
+Iteration 350, Error = 0.001892
+Iteration 400, Error = 0.001595
+Iteration 450, Error = 0.001374
+Iteration 500, Error = 0.001205
+Iteration 550, Error = 0.001071
+Iteration 600, Error = 0.000962
+Iteration 650, Error = 0.000873
+Iteration 700, Error = 0.000798
+Iteration 750, Error = 0.000734
+Iteration 800, Error = 0.000679
+Iteration 850, Error = 0.000632
+Iteration 900, Error = 0.000590
+Iteration 950, Error = 0.000552
+Iteration 1000, Error = 0.000519
+Iteration 1050, Error = 0.000490
+Iteration 1100, Error = 0.000464
+Iteration 1150, Error = 0.000410
+Iteration 1200, Error = 0.000388
+Iteration 1250, Error = 0.000369
+Iteration 1300, Error = 0.000352
+Iteration 1350, Error = 0.000336
+Iteration 1400, Error = 0.000321
+Iteration 1450, Error = 0.000308
+Iteration 1500, Error = 0.000296
+Iteration 1550, Error = 0.000284
+Iteration 1600, Error = 0.000274
+Iteration 1650, Error = 0.000264
+Iteration 1700, Error = 0.000255
+Iteration 1750, Error = 0.000246
+Iteration 1800, Error = 0.000239
+Iteration 1850, Error = 0.000231
+Iteration 1900, Error = 0.000224
+Iteration 1950, Error = 0.000217
+Iteration 2000, Error = 0.000211
+Iteration 2050, Error = 0.000205
+--- Training Exit Information ---
+Reason: Error threshold reached (avg error <= 2.0E-4)
+Iterations: 2096
+Average error: 2.000E-04
+----------------------------------
+Weights saved successfully to trainedWeights.bin
+--- Run Results ---
+Time taken (ms): 744560
+Actual Outputs:
+1.00 0.00 0.00 0.01 0.00 
+1.00 0.00 0.00 0.01 0.00 
+1.00 0.00 0.00 0.01 0.00 
+0.98 0.02 0.00 0.00 0.00 
+0.99 0.00 0.00 0.01 0.01 
+0.02 0.98 0.02 0.00 0.00 
+0.02 0.97 0.00 0.00 0.01 
+0.00 1.00 0.00 0.00 0.01 
+0.00 1.00 0.00 0.00 0.01 
+0.00 1.00 0.00 0.00 0.01 
+0.00 0.01 0.99 0.01 0.01 
+0.00 0.01 0.98 0.00 0.01 
+0.00 0.01 0.98 0.00 0.01 
+0.00 0.01 0.98 0.00 0.01 
+0.00 0.01 0.99 0.01 0.01 
+0.01 0.00 0.01 0.99 0.00 
+0.01 0.00 0.01 0.99 0.00 
+0.02 0.00 0.01 0.99 0.00 
+0.01 0.00 0.01 0.99 0.00 
+0.01 0.00 0.00 0.98 0.00 
+0.00 0.01 0.00 0.01 0.99 
+0.00 0.01 0.00 0.01 0.99 
+0.00 0.01 0.01 0.01 0.98 
+0.00 0.01 0.00 0.01 0.99 
+0.00 0.01 0.01 0.01 0.99 
+
+Testing:
+Time Started: 2026-01-08T17:50:55.859402
+=======================================================================================================
+--- Configuration Parameters ---
+Configuration File Name: configFile.txt
+Number of Connectivity Layers: 3
+Network Configuration: 65536-20-10-5
+Mode: RUN
+Populate Method: LOAD
+Show Input Table: false
+Show Truth Table: false
+Input Table Folder: ActivationsTesting/
+Number of Cases: 5
+Save Weights: true
+Loading Weights From File: trainedWeights.bin
+Saving Weights To File: trainedWeights.bin
+Input table loaded successfully from folder: ActivationsTesting/
+Weights loaded successfully from trainedWeights.bin
+--- Run Results ---
+Time taken (ms): 23
+Actual Outputs:
+0.99 0.00 0.00 0.01 0.01 
+0.00 1.00 0.00 0.00 0.01 
+0.00 0.01 0.98 0.00 0.01 
+0.00 0.00 0.01 0.95 0.02 
+0.00 0.00 0.03 0.03 0.99
+Training:
+Time Started: 2026-01-09T12:04:39.272228
+=======================================================================================================
+--- Configuration Parameters ---
+Configuration File Name: configFile.txt
+Number of Connectivity Layers: 3
+Network Configuration: 65536-20-10-5
+Mode: TRAIN
+Populate Method: RANDOM
+Random range: [-1.0000, 1.0000]
+Show Input Table: false
+Show Truth Table: false
+Learning Rate: 0.300000
+Max Iterations: 100000
+Keep Alive Interval: 50
+Average error threshold: 0.00020000
+Truth Table File: truthTableImg.txt
+Input Table Folder: ActivationsTraining/
+Number of Cases: 25
+Save Weights: true
+Saving Weights To File: trainedWeights.bin
+Input table loaded successfully from folder: ActivationsTraining/
+Iteration 50, Error = 0.023968
+Iteration 100, Error = 0.007796
+Iteration 150, Error = 0.004370
+Iteration 200, Error = 0.002976
+Iteration 250, Error = 0.002235
+Iteration 300, Error = 0.001779
+Iteration 350, Error = 0.001472
+Iteration 400, Error = 0.001252
+Iteration 450, Error = 0.001087
+Iteration 500, Error = 0.000959
+Iteration 550, Error = 0.000857
+Iteration 600, Error = 0.000774
+Iteration 650, Error = 0.000705
+Iteration 700, Error = 0.000647
+Iteration 750, Error = 0.000598
+Iteration 800, Error = 0.000555
+Iteration 850, Error = 0.000518
+Iteration 900, Error = 0.000485
+Iteration 950, Error = 0.000456
+Iteration 1000, Error = 0.000430
+Iteration 1050, Error = 0.000407
+Iteration 1100, Error = 0.000386
+Iteration 1150, Error = 0.000367
+Iteration 1200, Error = 0.000350
+Iteration 1250, Error = 0.000334
+Iteration 1300, Error = 0.000319
+Iteration 1350, Error = 0.000306
+Iteration 1400, Error = 0.000293
+Iteration 1450, Error = 0.000282
+Iteration 1500, Error = 0.000272
+Iteration 1550, Error = 0.000262
+Iteration 1600, Error = 0.000253
+Iteration 1650, Error = 0.000245
+Iteration 1700, Error = 0.000237
+Iteration 1750, Error = 0.000229
+Iteration 1800, Error = 0.000222
+Iteration 1850, Error = 0.000216
+Iteration 1900, Error = 0.000209
+Iteration 1950, Error = 0.000203
+--- Training Exit Information ---
+Reason: Error threshold reached (avg error <= 2.0E-4)
+Iterations: 1982
+Average error: 1.999E-04
+----------------------------------
+Weights saved successfully to trainedWeights.bin
+--- Run Results ---
+Time taken (ms): 679698
+Actual Outputs:
+0.99 0.01 0.00 0.01 0.01 
+0.99 0.01 0.00 0.01 0.00 
+0.99 0.01 0.00 0.01 0.01 
+0.99 0.01 0.00 0.01 0.01 
+0.98 0.01 0.00 0.02 0.00 
+0.01 0.99 0.01 0.00 0.01 
+0.01 0.99 0.01 0.00 0.01 
+0.01 0.98 0.01 0.00 0.01 
+0.01 0.99 0.01 0.00 0.01 
+0.01 0.99 0.01 0.00 0.01 
+0.00 0.02 0.98 0.01 0.00 
+0.00 0.01 0.99 0.01 0.00 
+0.00 0.01 0.99 0.01 0.00 
+0.00 0.00 0.99 0.01 0.00 
+0.00 0.01 0.99 0.01 0.00 
+0.01 0.00 0.01 0.99 0.01 
+0.00 0.00 0.01 0.99 0.01 
+0.01 0.00 0.01 0.99 0.00 
+0.01 0.00 0.01 0.99 0.00 
+0.01 0.00 0.01 0.99 0.00 
+0.01 0.01 0.00 0.00 0.99 
+0.01 0.01 0.00 0.00 0.99 
+0.01 0.01 0.00 0.00 0.99 
+0.01 0.01 0.00 0.00 0.99 
+0.01 0.01 0.00 0.00 0.99
+
+Testing:
+--- Configuration Parameters ---
+Configuration File Name: configFile.txt
+Number of Connectivity Layers: 3
+Network Configuration: 65536-20-10-5
+Mode: RUN
+Populate Method: LOAD
+Show Input Table: false
+Show Truth Table: false
+Input Table Folder: ActivationsTesting/
+Number of Cases: 5
+Save Weights: true
+Loading Weights From File: trainedWeights.bin
+Saving Weights To File: trainedWeights.bin
+Input table loaded successfully from folder: ActivationsTesting/
+Weights loaded successfully from trainedWeights.bin
+--- Run Results ---
+Time taken (ms): 22
+Actual Outputs:
+0.99 0.01 0.00 0.01 0.01 
+0.01 0.98 0.03 0.00 0.02 
+0.00 0.00 0.44 0.00 0.26 
+0.01 0.00 0.01 0.98 0.18 
+0.01 0.02 0.00 0.00 0.97 
+
+
+Training:
+Time Started: 2026-01-09T12:23:06.822200
+=======================================================================================================
+--- Configuration Parameters ---
+Configuration File Name: configFile.txt
+Number of Connectivity Layers: 3
+Network Configuration: 65536-25-10-5
+Mode: TRAIN
+Populate Method: RANDOM
+Random range: [-1.0000, 1.0000]
+Show Input Table: false
+Show Truth Table: false
+Learning Rate: 0.300000
+Max Iterations: 100000
+Keep Alive Interval: 50
+Average error threshold: 0.00020000
+Truth Table File: truthTableImg.txt
+Input Table Folder: ActivationsTraining/
+Number of Cases: 25
+Save Weights: true
+Saving Weights To File: trainedWeights.bin
+Input table loaded successfully from folder: ActivationsTraining/
+Iteration 50, Error = 0.013713
+Iteration 100, Error = 0.004903
+Iteration 150, Error = 0.002863
+Iteration 200, Error = 0.001997
+Iteration 250, Error = 0.001522
+Iteration 300, Error = 0.001224
+Iteration 350, Error = 0.001022
+Iteration 400, Error = 0.000875
+Iteration 450, Error = 0.000764
+Iteration 500, Error = 0.000677
+Iteration 550, Error = 0.000608
+Iteration 600, Error = 0.000551
+Iteration 650, Error = 0.000504
+Iteration 700, Error = 0.000464
+Iteration 750, Error = 0.000430
+Iteration 800, Error = 0.000400
+Iteration 850, Error = 0.000374
+Iteration 900, Error = 0.000351
+Iteration 950, Error = 0.000331
+Iteration 1000, Error = 0.000313
+Iteration 1050, Error = 0.000297
+Iteration 1100, Error = 0.000282
+Iteration 1150, Error = 0.000269
+Iteration 1200, Error = 0.000256
+Iteration 1250, Error = 0.000245
+Iteration 1300, Error = 0.000235
+Iteration 1350, Error = 0.000226
+Iteration 1400, Error = 0.000217
+Iteration 1450, Error = 0.000209
+Iteration 1500, Error = 0.000201
+--- Training Exit Information ---
+Reason: Error threshold reached (avg error <= 2.0E-4)
+Iterations: 1511
+Average error: 1.999E-04
+----------------------------------
+Weights saved successfully to trainedWeights.bin
+--- Run Results ---
+Time taken (ms): 658923
+Actual Outputs:
+0.99 0.01 0.00 0.00 0.01 
+0.99 0.00 0.01 0.01 0.00 
+0.99 0.00 0.00 0.00 0.01 
+0.99 0.00 0.00 0.00 0.01 
+0.99 0.01 0.00 0.00 0.01 
+0.00 0.98 0.01 0.00 0.02 
+0.01 0.99 0.00 0.00 0.01 
+0.02 0.99 0.00 0.02 0.00 
+0.01 0.99 0.00 0.00 0.01 
+0.01 0.99 0.00 0.00 0.01 
+0.01 0.00 0.99 0.01 0.00 
+0.00 0.00 0.99 0.00 0.01 
+0.00 0.00 0.99 0.00 0.01 
+0.01 0.02 0.99 0.00 0.00 
+0.00 0.01 0.99 0.00 0.01 
+0.00 0.01 0.01 0.99 0.01 
+0.00 0.01 0.01 0.99 0.01 
+0.00 0.01 0.01 0.99 0.00 
+0.01 0.00 0.01 0.98 0.01 
+0.01 0.02 0.01 0.98 0.00 
+0.01 0.01 0.01 0.01 0.99 
+0.01 0.01 0.01 0.01 0.99 
+0.01 0.01 0.01 0.01 0.99 
+0.01 0.01 0.01 0.01 0.99 
+0.01 0.01 0.01 0.01 0.99
+
+Testing:
+
+Time Started: 2026-01-09T12:36:34.081109
+=======================================================================================================
+--- Configuration Parameters ---
+Configuration File Name: configFile.txt
+Number of Connectivity Layers: 3
+Network Configuration: 65536-25-10-5
+Mode: RUN
+Populate Method: LOAD
+Show Input Table: false
+Show Truth Table: false
+Input Table Folder: ActivationsTesting/
+Number of Cases: 5
+Save Weights: true
+Loading Weights From File: trainedWeights.bin
+Saving Weights To File: trainedWeights.bin
+Input table loaded successfully from folder: ActivationsTesting/
+Weights loaded successfully from trainedWeights.bin
+--- Run Results ---
+Time taken (ms): 29
+Actual Outputs:
+0.99 0.01 0.00 0.00 0.01 
+0.01 0.99 0.00 0.01 0.00 
+0.02 0.03 0.97 0.00 0.00 
+0.00 0.01 0.01 0.99 0.00 
+0.01 0.01 0.04 0.00 0.99
+
+Time Started: 2026-01-13T14:05:58.278112
+=======================================================================================================
+--- Configuration Parameters ---
+Configuration File Name: configFileTraining.txt
+Number of Connectivity Layers: 3
+Network Configuration: 65536-25-10-5
+Mode: TRAIN
+Populate Method: RANDOM
+Random range: [-1.0000, 1.0000]
+Show Input Table: false
+Show Truth Table: false
+Learning Rate: 0.300000
+Max Iterations: 100000
+Keep Alive Interval: 50
+Average error threshold: 0.00010000
+Truth Table File: truthTableImg.txt
+Input Table Folder: ActivationsTraining/
+Number of Cases: 25
+Save Weights: true
+Saving Weights To File: trainedWeights.bin
+Input table loaded successfully from folder: ActivationsTraining/
+Iteration 50, Error = 0.016702
+Iteration 100, Error = 0.006186
+Iteration 150, Error = 0.003545
+Iteration 200, Error = 0.002435
+Iteration 250, Error = 0.001825
+Iteration 300, Error = 0.001413
+Iteration 350, Error = 0.001174
+Iteration 400, Error = 0.001003
+Iteration 450, Error = 0.000874
+Iteration 500, Error = 0.000774
+Iteration 550, Error = 0.000695
+Iteration 600, Error = 0.000630
+Iteration 650, Error = 0.000577
+Iteration 700, Error = 0.000531
+Iteration 750, Error = 0.000492
+Iteration 800, Error = 0.000459
+Iteration 850, Error = 0.000429
+Iteration 900, Error = 0.000403
+Iteration 950, Error = 0.000380
+Iteration 1000, Error = 0.000360
+Iteration 1050, Error = 0.000341
+Iteration 1100, Error = 0.000325
+Iteration 1150, Error = 0.000310
+Iteration 1200, Error = 0.000296
+Iteration 1250, Error = 0.000283
+Iteration 1300, Error = 0.000272
+Iteration 1350, Error = 0.000261
+Iteration 1400, Error = 0.000251
+Iteration 1450, Error = 0.000242
+Iteration 1500, Error = 0.000233
+Iteration 1550, Error = 0.000225
+Iteration 1600, Error = 0.000218
+Iteration 1650, Error = 0.000211
+Iteration 1700, Error = 0.000204
+Iteration 1750, Error = 0.000198
+Iteration 1800, Error = 0.000192
+Iteration 1850, Error = 0.000187
+Iteration 1900, Error = 0.000181
+Iteration 1950, Error = 0.000177
+Iteration 2000, Error = 0.000172
+Iteration 2050, Error = 0.000167
+Iteration 2100, Error = 0.000163
+Iteration 2150, Error = 0.000159
+Iteration 2200, Error = 0.000155
+Iteration 2250, Error = 0.000152
+Iteration 2300, Error = 0.000148
+Iteration 2350, Error = 0.000145
+Iteration 2400, Error = 0.000142
+Iteration 2450, Error = 0.000139
+Iteration 2500, Error = 0.000136
+Iteration 2550, Error = 0.000133
+Iteration 2600, Error = 0.000130
+Iteration 2650, Error = 0.000128
+Iteration 2700, Error = 0.000125
+Iteration 2750, Error = 0.000123
+Iteration 2800, Error = 0.000120
+Iteration 2850, Error = 0.000118
+Iteration 2900, Error = 0.000116
+Iteration 2950, Error = 0.000114
+Iteration 3000, Error = 0.000112
+Iteration 3050, Error = 0.000110
+Iteration 3100, Error = 0.000107
+Iteration 3150, Error = 0.000105
+Iteration 3200, Error = 0.000103
+Iteration 3250, Error = 0.000102
+Iteration 3300, Error = 0.000100
+--- Training Exit Information ---
+Reason: Error threshold reached (avg error <= 1.0E-4)
+Iterations: 3301
+Average error: 9.998E-05
+----------------------------------
+Weights saved successfully to trainedWeights.bin
+--- Run Results ---
+Time taken (ms): 1437575
+Actual Outputs:
+0.99 0.01 0.00 0.01 0.01 
+0.99 0.01 0.00 0.01 0.01 
+0.99 0.00 0.00 0.01 0.01 
+0.99 0.00 0.00 0.01 0.01 
+0.99 0.00 0.00 0.01 0.01 
+0.00 0.99 0.00 0.00 0.01 
+0.01 0.99 0.00 0.01 0.00 
+0.00 0.99 0.01 0.01 0.00 
+0.01 0.99 0.00 0.01 0.00 
+0.01 0.99 0.00 0.01 0.00 
+0.00 0.00 0.99 0.00 0.01 
+0.00 0.00 0.99 0.00 0.01 
+0.00 0.01 0.99 0.00 0.00 
+0.00 0.00 0.99 0.00 0.01 
+0.00 0.00 0.99 0.00 0.01 
+0.00 0.01 0.01 0.99 0.00 
+0.00 0.01 0.01 0.99 0.01 
+0.00 0.01 0.01 0.99 0.01 
+0.01 0.01 0.01 0.99 0.00 
+0.01 0.01 0.01 0.99 0.00 
+0.00 0.00 0.01 0.01 0.99 
+0.00 0.00 0.01 0.01 0.99 
+0.00 0.00 0.01 0.01 0.99 
+0.00 0.00 0.01 0.01 0.99 
+0.00 0.00 0.01 0.01 0.99

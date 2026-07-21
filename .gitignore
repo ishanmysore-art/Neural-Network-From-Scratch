@@ -1,0 +1,20 @@
+# Ignore Mac system files
+.DS_Store
+
+# Ignore compiled Java bytecode
+*.class
+
+# Ignore Python virtual environments
+venv/
+.venv/
+env/
+
+# Ignore all image directories and tracking files
+ImagesBIN/
+ImagesBINProcessed/
+ImagesBMP/
+ImagesBMPOld/
+ImagesRaw/
+ImagesRawOld/
+BMPOutputIntermediate/
+BytesFromActivations/

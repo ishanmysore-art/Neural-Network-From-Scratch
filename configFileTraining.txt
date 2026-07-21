@@ -1,0 +1,19 @@
+3;                      // number of connectivity layers
+65536-25-10-5;          // network configuration
+false;                   // true if training, false if running
+-1.0;                    // lowest value for random generation
+1.0;                    // highest value for random generation
+0.3;                    // lambda (learning rate)
+100000;                 // maximum number of training iterations
+50;                  // keep alive interval
+0.0001;                   // average error threshold (stop when average error <= this value)
+false;                  // option to show the input table
+false;                   // option to show the truth table
+25;                      // number of cases
+LOAD;                 // method of choosing weights (LOAD, MANUAL, or RANDOM)
+false;                   // option to save the weights
+trainedWeights.bin;     // name of file to load weights from
+trainedWeights.bin;     // name of file to save weights to
+truthTableImg.txt;    // name of file to load truth table from
+ActivationsTraining/;           // name of folder to load input table from
+FOLDER;                 // method of choosing input table (FILE or FOLDER)
