@@ -1,124 +1,227 @@
-# Neural Network From Scratch
+# N-Layer Neural Network From Scratch
 
-A fully connected feedforward neural network implemented entirely from scratch in Java. This project recreates the core mechanics behind modern deep learning frameworks by implementing forward propagation, backpropagation, gradient descent, and customizable network architectures without relying on external machine learning libraries.
+A configurable feedforward neural network implemented entirely from scratch in Java. This project supports arbitrary network architectures, forward propagation, backpropagation, gradient descent training, configurable runtime modes, and binary weight serialization—all without using external machine learning libraries.
 
 ---
 
 ## Overview
 
-The goal of this project is to understand how neural networks work at a fundamental level by building every component from first principles.
+This project explores the core algorithms behind modern neural networks by implementing every component from first principles.
 
-Rather than using libraries such as TensorFlow or PyTorch, this implementation performs all computations manually, including matrix operations, activation functions, gradient calculations, and parameter updates.
+Unlike frameworks such as TensorFlow or PyTorch, every stage of the learning process is written manually, including:
 
-The network supports supervised learning through backpropagation and gradient descent, allowing it to learn nonlinear relationships directly from data.
+- Network configuration
+- Weight initialization
+- Forward propagation
+- Error computation
+- Backpropagation
+- Gradient descent optimization
+- Model persistence
+- Inference
+
+The implementation is generalized to support **any number of layers**, making it significantly more flexible than a traditional single-hidden-layer educational neural network.
 
 ---
 
 ## Features
 
-### Feedforward Neural Network
-- Fully connected (dense) architecture
-- Configurable number of layers
-- Customizable neurons per layer
-- Support for multiple hidden layers
+### Configurable N-Layer Architecture
+
+The network is completely configurable through a control file.
+
+Users can specify:
+
+- Number of layers
+- Neurons per layer
+- Learning rate
+- Maximum training iterations
+- Error threshold
+- Weight initialization strategy
+- Runtime mode (TRAIN or RUN)
+- Input and truth datasets
+
+Rather than hardcoding a fixed architecture, the implementation dynamically allocates memory for arbitrary feedforward networks.
+
+Example architectures:
+
+```
+2 → 2 → 1
+```
+
+```
+4 → 8 → 8 → 2
+```
+
+```
+784 → 128 → 64 → 10
+```
+
+---
 
 ### Forward Propagation
-- Manual computation of weighted sums
-- Bias handling
-- Layer-by-layer activation computation
+
+Implements manual feedforward computation through each layer of the network.
+
+For every neuron, the network computes:
+
+```
+Weighted Sum
+      ↓
+Activation Function
+      ↓
+Output Activation
+```
+
+The implementation performs every calculation using Java arrays and nested loops without relying on external numerical libraries.
+
+---
 
 ### Backpropagation
-- Gradient computation using the chain rule
-- Error propagation through hidden layers
-- Automatic weight and bias updates
 
-### Optimization
-- Gradient descent training
-- Configurable learning rate
-- Iterative parameter optimization
+Implements the complete backpropagation algorithm from scratch.
+
+Training includes:
+
+- Output error computation
+- Hidden-layer error propagation
+- Gradient computation
+- Weight updates using gradient descent
+
+The implementation supports networks with any number of hidden layers through generalized recursive computations.
+
+---
+
+### Gradient Descent Optimization
+
+Weights are updated after each training example using gradient descent.
+
+Training stops automatically when either:
+
+- The average error falls below a user-defined threshold
+- The maximum number of iterations is reached
+
+Progress can optionally be reported at configurable intervals.
+
+---
 
 ### Activation Functions
-Implemented common nonlinear activation functions, including:
+
+Implemented:
+
 - Sigmoid
-- Tanh
+- Hyperbolic Tangent (tanh)
+
+The current implementation uses the sigmoid activation function during training and inference while providing an extensible framework for additional activation functions.
 
 ---
 
-## Learning Pipeline
+### Flexible Weight Initialization
+
+Supports three initialization modes:
+
+- Manual initialization
+- Random initialization
+- Load existing weights from file
+
+This allows experiments to be reproduced and previously trained networks to be reused without retraining.
+
+---
+
+### Model Persistence
+
+The network can save trained weights directly to a binary file and reload them later.
+
+Features include:
+
+- Binary serialization
+- Configuration validation before loading
+- Reproducible inference
+- Continued training from saved checkpoints
+
+---
+
+### Dataset Support
+
+The network accepts datasets from multiple sources.
+
+Supported formats include:
+
+- Plain-text input tables
+- Plain-text truth tables
+- Binary activation files stored in folders
+
+This allows the same implementation to be used on datasets beyond simple Boolean logic problems.
+
+---
+
+### Runtime Modes
+
+The program supports two independent execution modes.
+
+#### TRAIN
+
+- Load training data
+- Initialize or load weights
+- Train the network
+- Report convergence statistics
+- Optionally save trained weights
+
+#### RUN
+
+- Load trained weights
+- Execute forward propagation
+- Produce predictions without retraining
+
+---
+
+## Compiler Architecture
 
 ```
-Training Data
-      │
-      ▼
-Forward Propagation
-      │
-      ▼
-Prediction
-      │
-      ▼
-Loss Computation
-      │
-      ▼
-Backpropagation
-      │
-      ▼
-Gradient Descent
-      │
-      ▼
-Updated Parameters
+                 Configuration File
+                        │
+                        ▼
+             Load Network Parameters
+                        │
+                        ▼
+              Allocate Network Memory
+                        │
+                        ▼
+          Initialize or Load Weights
+                        │
+                        ▼
+          ┌────────────────────────┐
+          │        TRAIN           │
+          │                        │
+          │ Forward Propagation    │
+          │        ↓               │
+          │ Error Computation      │
+          │        ↓               │
+          │ Backpropagation        │
+          │        ↓               │
+          │ Gradient Descent       │
+          └────────────────────────┘
+                        │
+                        ▼
+               Save Weights (Optional)
+                        │
+                        ▼
+               Forward Propagation
+                        │
+                        ▼
+                  Network Outputs
 ```
 
 ---
 
-## Architecture
+## Example Applications
 
-```
-Input Layer
-      │
-      ▼
-Hidden Layer(s)
-      │
-      ▼
-Output Layer
-```
+The implementation demonstrates supervised learning on standard Boolean logic problems, including:
 
-Each neuron computes
+- AND
+- OR
+- XOR
 
-```
-z = Wx + b
-a = activation(z)
-```
-
-During training, gradients are computed using backpropagation and used to update weights:
-
-```
-W = W − α∇W
-b = b − α∇b
-```
-
-where:
-
-- **α** = learning rate
-- **∇W** = weight gradients
-- **∇b** = bias gradients
-
----
-
-## Project Structure
-
-```
-src/
-├── NeuralNetwork.java
-├── Layer.java
-├── Neuron.java
-├── Matrix.java
-├── ActivationFunctions.java
-├── LossFunctions.java
-├── Trainer.java
-└── Main.java
-```
-
-*(Directory names may differ depending on your implementation.)*
+Because the architecture is configurable, the same implementation can be adapted to larger supervised learning datasets by modifying the configuration and input files.
 
 ---
 
@@ -126,40 +229,47 @@ src/
 
 - Java
 - Object-Oriented Programming
-- Linear Algebra
-- Calculus
+- Feedforward Neural Networks
+- Backpropagation
 - Gradient Descent
-- Backpropagation
-- Machine Learning Fundamentals
+- Binary File I/O
+- Recursive Algorithms
+- Numerical Computing
 
 ---
 
-## Key Concepts Explored
+## Project Structure
 
-This project demonstrates understanding of:
-
-- Artificial Neural Networks
-- Feedforward computation
-- Matrix mathematics
-- Activation functions
-- Cost functions
-- Gradient descent optimization
-- Backpropagation
-- Weight initialization
-- Bias learning
+```
+NLayer.java
+├── Configuration loading
+├── Memory allocation
+├── Weight initialization
+├── Dataset loading
+├── Forward propagation
+├── Backpropagation
+├── Gradient descent training
+├── Weight serialization
+├── Inference
+└── Reporting
+```
 
 ---
 
-## Why Build a Neural Network From Scratch?
+## Key Engineering Concepts
 
-Machine learning libraries abstract away much of the underlying mathematics. This project focuses on implementing the algorithms manually to gain a deeper understanding of how neural networks actually learn.
+This project demonstrates experience with:
 
-Building the network from first principles provides insight into:
-
-- How predictions are computed
-- How gradients are derived
-- Why backpropagation works
-- How optimization improves model performance
+- Neural network implementation from first principles
+- Configurable software architecture
+- Dynamic memory allocation
+- Recursive feedforward computation
+- Recursive backpropagation
+- Numerical optimization
+- Binary serialization
+- File parsing
+- Object-oriented software design
+- Algorithm implementation in Java
 
 ---
 
@@ -168,18 +278,26 @@ Building the network from first principles provides insight into:
 Potential extensions include:
 
 - Mini-batch gradient descent
-- Stochastic gradient descent (SGD)
+- Stochastic Gradient Descent (SGD)
 - Adam optimizer
 - Softmax output layer
 - Cross-entropy loss
-- Dropout regularization
-- Batch normalization
-- Model serialization
+- Bias parameters
+- Additional activation functions
+- Regularization techniques
+- Automatic dataset normalization
 - GPU acceleration
-- Convolutional neural networks (CNNs)
 
 ---
 
-## Author
+## Why This Project?
 
-**Ishan Mysore**
+Most machine learning libraries abstract away the mechanics of learning.
+
+This project rebuilds those algorithms from the ground up, providing a deeper understanding of how neural networks compute predictions, propagate error signals, and iteratively optimize parameters through backpropagation and gradient descent.
+
+Rather than relying on existing frameworks, every major component—from configuration and memory management to training and inference—was implemented manually in Java.
+
+---
+
+**Author:** Ishan Mysore
